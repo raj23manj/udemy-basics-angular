@@ -32,3 +32,22 @@
 <ng-template #noServer><p>No Server</p></ng-template>
 
 <app-server *ngFor="let server of servers"></app-server>
+
+<hr>
+
+<button class='btn btn-primary'
+  type="button"
+  name="button"
+  (click) = "onCreateDetails()"
+  >Add Details</button>
+
+<p *ngIf='!displayDetail'> Toggel content</p>
+
+<ul>
+  <li *ngFor="let detail of details">
+
+    <div [ngClass]="{above: detail > 4}">
+    {{ detail }} - number
+    </div>
+  </li>
+</ul>

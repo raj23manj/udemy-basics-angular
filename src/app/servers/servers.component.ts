@@ -14,6 +14,9 @@ export class ServersComponent implements OnInit {
   userName = '';
   serverCreated=false;
   servers: string[] = ['T1', 'T2'];
+  details: number[] = [];
+  count: number = 0;
+  displayDetail: boolean = false;
 
 
   constructor() {
@@ -48,5 +51,12 @@ export class ServersComponent implements OnInit {
 // onUpdateUser(event) {
 //  this.usernameEmpty = (<HTMLInputElement>event.target).value.length > 0;
 //  }
+
+onCreateDetails(){
+  this.displayDetail = !this.displayDetail;
+  // this.details.push(this.count++);
+  this.details.push(this.details.length + 1);
+}
+
 
 }
