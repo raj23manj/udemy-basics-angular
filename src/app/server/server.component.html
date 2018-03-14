@@ -1,1 +1,4 @@
-<p [ngStyle]="{'backgroundColor': getColor()}">Server component {{ serverId }} - {{ serverStatus }}</p>
+<p [ngStyle]="{'backgroundColor': getColor()}"
+   [ngClass]="{online: serverStatus === 'online'}"  >
+  Server component {{ serverId }} - {{ serverStatus }}
+</p>
