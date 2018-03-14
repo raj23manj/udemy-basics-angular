@@ -44,10 +44,10 @@
 <p *ngIf='!displayDetail'> Toggel content</p>
 
 <ul>
-  <li *ngFor="let detail of details">
+  <li *ngFor="let detail of details; let i = index">
 
-    <div [ngClass]="{above: detail > 4}">
-    {{ detail }} - number
+    <div [ngClass]="{above: i >= 4}">
+    {{ detail }}
     </div>
   </li>
 </ul>

@@ -55,7 +55,8 @@ export class ServersComponent implements OnInit {
 onCreateDetails(){
   this.displayDetail = !this.displayDetail;
   // this.details.push(this.count++);
-  this.details.push(this.details.length + 1);
+  // this.details.push(this.details.length + 1);
+  this.details.push(new Date());
 }
 
 
