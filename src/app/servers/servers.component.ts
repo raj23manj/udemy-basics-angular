@@ -12,6 +12,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No Server was created';
   serverName = 'Test';
   userName = '';
+  serverCreated=false;
 
 
   constructor() {
@@ -25,6 +26,7 @@ export class ServersComponent implements OnInit {
 
   onCreateServer(){
     this.serverCreationStatus = 'server  was created' + this.serverName;
+    this.serverCreated = true;
   }
 
   // onUpdateServerName(event: InputEvent){
